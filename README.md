@@ -48,6 +48,11 @@ An offline AI assistant built with Python, Flask, and Ollama.
 6. Open in your browser:
    `http://127.0.0.1:5000`
 
+## Project Screenshot
+
+![GhostShell AI][ghostshell-demo.png screen shots is added]
+
+
 ## 👨‍💻 Author
 Abubakkar Sithik M
 
