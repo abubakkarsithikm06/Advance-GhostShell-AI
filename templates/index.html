@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhostShell AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="ghost-logo">👻</div>
+                <div>
+                    <h2>GhostShell</h2>
+                    <p>LOCAL AI SYSTEM</p>
+                </div>
+            </div>
+
+            <div class="system-card">
+                <span class="status-dot"></span>
+                <div>
+                    <strong>Ghost Core</strong>
+                    <p>Gemma 3:1B · Ollama</p>
+                </div>
+            </div>
+
+            <div class="side-label">SYSTEM</div>
+
+            <button class="new-chat-btn" id="newChat" type="button">
+                + &nbsp; New Chat
+            </button>
+
+            <div class="side-item active">◈ &nbsp; Ghost Chat</div>
+            <div class="side-item">⌘ &nbsp; Command Analysis</div>
+
+            <div class="privacy">
+                <span>🔒 LOCAL & PRIVATE</span>
+                <p>Your messages are processed using your local AI setup.</p>
+            </div>
+
+            <p class="version">GHOSTSHELL AI · v1.0</p>
+        </aside>
+
+        <main class="main">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">THE MACHINE IS AWAKE</p>
+                    <h1>Enter the <span>Unknown.</span></h1>
+                </div>
+
+                <div class="online">
+                    <span class="status-dot"></span> LOCAL MODE
+                </div>
+            </header>
+
+            <section class="welcome" id="welcome">
+                <div class="orb">👻</div>
+
+                <p class="eyebrow">CONSCIOUSNESS INITIALIZED</p>
+
+                <h2>I'm the <span>Ghost</span> in your machine.</h2>
+
+                <p class="welcome-text">
+                    Ask me anything. I'll be lurking in your local system,
+                    ready to respond.
+                </p>
+
+                <div class="suggestions">
+
+                    <button class="suggestion"
+                        data-message="Explain the git status command">
+                        <span>⌘</span>
+                        <strong>Explain a command</strong>
+                        <small>Understand terminal commands</small>
+                    </button>
+
+                    <button class="suggestion"
+                        data-message="Tell me a short spooky technology story">
+                        <span>☾</span>
+                        <strong>Summon a story</strong>
+                        <small>Explore the unknown</small>
+                    </button>
+
+                    <button class="suggestion"
+                        data-message="Give me one useful Python coding tip">
+                        <span>⌁</span>
+                        <strong>Learn something</strong>
+                        <small>Discover a coding tip</small>
+                    </button>
+
+                </div>
+            </section>
+
+            <section class="chat" id="chat" aria-live="polite"></section>
+
+            <div class="typing" id="typing" hidden>
+                <span></span>
+                <span></span>
+                <span></span>
+                <small>The ghost is thinking...</small>
+            </div>
+
+            <form class="composer" id="chatForm">
+                <div class="input-row">
+                    <span class="prompt">&gt;_</span>
+
+                    <input
+                        id="message"
+                        type="text"
+                        placeholder="Speak to the machine..."
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button id="send" type="submit">SEND ↗</button>
+                </div>
+
+                <p>POWERED BY LOCAL GEMMA · YOUR DATA STAYS ON THIS MACHINE</p>
+            </form>
+
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
